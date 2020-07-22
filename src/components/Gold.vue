@@ -25,8 +25,8 @@ import store from "@/store.js";
                 let new_activity = `${newGold<0?'Perdiste':'Ganaste'} ${newGold} de ${this.title} `
                 store.addActivity(new_activity);
             }
-            
         }
+        
     }
 </script>
 
@@ -116,7 +116,7 @@ h2{
     } 
 
 .container-activities {
-    width: 50%;
+    width: 100%;
     border: 2px solid black;
     font-size: 15px;
     background: lightpink;
@@ -130,5 +130,22 @@ h2{
 .container-activities ul {
     list-style: none;
 }
+
+.botonsReset{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.botonsReset:hover {
+        background: yellow;
+        border: 1px solid white;
+        color: black;
+        font-weight: 700;
+    } 
 
 </style>

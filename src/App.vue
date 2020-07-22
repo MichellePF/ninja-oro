@@ -14,6 +14,10 @@
         </ul>
        
       </div> 
+      <div>
+        <input @click="reset" class="botonsReset" type="submit" value="Reset">
+      </div>
+       
     </div>
     
    
@@ -32,6 +36,16 @@ export default {
   },
   data: () => {
     return store.state
+  },
+  methods: {
+    reset: function(){
+      let resetPage = confirm('¿Quiere resetear la pagina?');
+      if(resetPage){
+      store.resetGold();
+      store.resetActivities();
+                    
+      }
+    }
   }
 }
 </script>
