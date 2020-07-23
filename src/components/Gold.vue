@@ -23,7 +23,8 @@ import store from "@/store.js";
                 console.log(newGold);
                 store.sumarOro(newGold);
                 let new_activity = `${newGold<0?'Perdiste':'Ganaste'} ${newGold} de ${this.title} `
-                store.addActivity(new_activity);
+                const object_activity = {texto: new_activity, num: newGold};
+                store.addActivity(object_activity);
             }
         }
         
@@ -146,6 +147,13 @@ h2{
         border: 1px solid white;
         color: black;
         font-weight: 700;
-    } 
+}
+
+.red {
+    color: red;
+}
+.green{
+    color: green;
+}
 
 </style>

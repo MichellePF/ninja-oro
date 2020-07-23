@@ -1,4 +1,4 @@
-# nija-oro
+# ninja-oro
 
 ## Project setup
 ```

@@ -1,7 +1,7 @@
 <template>
 <div id="app">
   <h1 class="title">Ninja Gold</h1>
-  <h2>Gold: {{goldTotal}}</h2>
+  <h2 v-bind:class="{'green': goldTotal > 0, 'red': goldTotal < 0}">Gold: {{goldTotal}}</h2>
     <div class="container">
       <Gold title="Farm" :min="10" :max="20"/>
       <Gold title="Cave" :min="5" :max="10"/>
@@ -10,7 +10,7 @@
       <div class="container-activities">
         <h2>Activities:</h2>
         <ul>
-          <li v-for="(activity,i) in activity" v-bind:key="i">{{activity}}</li>
+          <li v-bind:class="{'green': activity.num > 0, 'red': activity.num < 0}" v-for="(activity,i) in activity" v-bind:key="i">{{activity.texto}}</li>
         </ul>
        
       </div> 
